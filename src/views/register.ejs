@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register | Teammate</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="/public/index.css" />
+    </head>
+    <body>
+        <div class="register">
+            <div class="register__container">
+                <form
+                    method="post"
+                    action="http://localhost:3000/user/register"
+                    class="register__form"
+                >
+                    <div class="head__form">
+                        <div class="logo"></div>
+                        <span class="tittle">Register</span>
+                    </div>
+                    <div class="box__input">
+                        <div class="group__input">
+                            <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                class="input_field"
+                                autocomplete="off"
+                            />
+                            <label class="input_field_name" for="username">
+                                Username
+                            </label>
+                            <i
+                                class="fa-solid fa-circle-check valid--form--icons"
+                            ></i>
+                            <i
+                                class="fa-solid fa-triangle-exclamation invalid--form--icons"
+                            ></i>
+                            <p class="reminder"></p>
+                        </div>
+                        <div class="group__input">
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                class="input_field"
+                                autocomplete="off"
+                            />
+                            <label class="input_field_name" for="password"
+                                >Password</label
+                            >
+                            <i
+                                class="fa-solid fa-circle-check valid--form--icons"
+                            ></i>
+                            <i
+                                class="fa-solid fa-triangle-exclamation invalid--form--icons"
+                            ></i>
+                            <p class="reminder"></p>
+                        </div>
+                        <div class="group__input">
+                            <input
+                                type="text"
+                                name="email"
+                                id="email"
+                                class="input_field"
+                                autocomplete="off"
+                            />
+                            <label class="input_field_name" for="email"
+                                >Email</label
+                            >
+                            <i
+                                class="fa-solid fa-circle-check valid--form--icons"
+                            ></i>
+                            <i
+                                class="fa-solid fa-triangle-exclamation invalid--form--icons"
+                            ></i>
+                            <p class="reminder"></p>
+                        </div>
+                        <div class="group__input">
+                            <input
+                                type="text"
+                                name="displayname"
+                                id="displayname"
+                                class="input_field"
+                                autocomplete="off"
+                            />
+                            <label class="input_field_name" for="displayname"
+                                >Display name</label
+                            >
+                            <i
+                                class="fa-solid fa-circle-check valid--form--icons"
+                            ></i>
+                            <i
+                                class="fa-solid fa-triangle-exclamation invalid--form--icons"
+                            ></i>
+                            <p class="reminder"></p>
+                        </div>
+                        <div class="group__input">
+                            <button class="register__sunmit--btn" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="/public/js/script/register.js"></script>
+</html>

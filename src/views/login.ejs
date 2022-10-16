@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login | Teammate</title>
+        <link rel="stylesheet" href="/public/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="login">
+            <div class="login__container">
+                <form
+                    action="http://localhost:3000/user/login"
+                    method="post"
+                    class="login__form"
+                >
+                    <div class="login__form--head">
+                        <div class="logo"></div>
+                        <span class="tittle">Login</span>
+                    </div>
+                    <span class="notification">
+                        <% if (messages.error) { %> <%= messages.error%> <% }%>
+                    </span>
+                    <div class="box__input">
+                        <div class="group__input">
+                            <input
+                                autocomplete="off"
+                                placeholder="Username"
+                                type="text"
+                                name="username"
+                                id="username"
+                                class="input_field"
+                            />
+                            <label class="input_field_name" for="username">
+                                <i
+                                    class="fa-solid fa-circle-user label--icons"
+                                ></i>
+                            </label>
+                            <p class="reminder"></p>
+                        </div>
+                        <div class="group__input">
+                            <input
+                                autocomplete="off"
+                                placeholder="Password"
+                                type="password"
+                                name="password"
+                                id="password"
+                                class="input_field"
+                            />
+                            <label class="input_field_name" for="password">
+                                <i class="fa-solid fa-lock label--icons"></i>
+                            </label>
+                            <p class="reminder"></p>
+                        </div>
+                        <div class="group__input">
+                            <button class="login__sunmit--btn" type="submit">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                    <div class="forgot__password">
+                        <span class="line"></span>
+                        <a class="forgot__password--link" href=""
+                            >Quên mật khẩu?</a
+                        >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="/public/js/script/login.js"></script>
+</html>

@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; }
+
+html {
+  font-size: 65.5%; }
+
+.register {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: url(/public/img/TriTon2nd.jpg) no-repeat center/cover; }
+  .register__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 0 40px 4px rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    z-index: 2; }
+  .register .head__form {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .register .logo {
+    width: 200px;
+    height: 200px;
+    background: url(/public/img/logo.png) no-repeat center/cover; }
+  .register .tittle {
+    position: absolute;
+    top: 90%;
+    color: white;
+    font-size: 28px;
+    font-family: 'Dancing Script', cursive; }
+  .register__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 36px 40px; }
+  .register .box__input {
+    margin-top: 20px; }
+  .register .group__input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60px; }
+  .register .input_field_name {
+    position: absolute;
+    top: 10px;
+    display: block;
+    color: white;
+    font-size: 20px;
+    cursor: pointer; }
+  .register .input_field {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px 0px 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    cursor: pointer; }
+  .register .active.input_field_name {
+    top: -8px;
+    font-size: 18px;
+    padding: 0;
+    color: #66ffff;
+    transition: 0.4s linear; }
+  .register .valid--form--icons,
+  .register .invalid--form--icons {
+    position: absolute;
+    top: 12px;
+    right: 4px;
+    display: none;
+    color: #00ff33;
+    font-size: 1.8rem; }
+  .register .invalid--form--icons {
+    color: red; }
+  .register .valid .valid--form--icons {
+    display: block; }
+  .register .invalid .invalid--form--icons {
+    display: block; }
+  .register .reminder {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 8px;
+    color: red;
+    font-size: 1.4rem; }
+  .register__sunmit--btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 80px;
+    height: 40px;
+    background-color: #66ffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: 0.4s linear; }
+    .register__sunmit--btn:hover {
+      opacity: 1;
+      box-shadow: 0 0 16px 4px #99ffcc;
+      transition: 0.4s linear;
+      cursor: pointer; }
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url(/public/img/TriTon2nd.jpg) no-repeat center/cover; }
+  .login__container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px); }
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 64px; }
+  .login__form--head {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; }
+  .login__form--head .logo {
+    width: 200px;
+    height: 200px;
+    background: url(/public/img/logo.png) no-repeat center/cover; }
+  .login__form--head .tittle {
+    position: absolute;
+    top: 90%;
+    color: white;
+    font-size: 28px;
+    font-family: 'Dancing Script', cursive; }
+  .login .notification {
+    width: 100%;
+    height: 24px;
+    color: #fa2727;
+    font-size: 1.7rem;
+    font-style: italic;
+    text-align: center; }
+  .login .group__input:first-child {
+    height: 36px; }
+  .login .group__input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 52px; }
+  .login .input_field_name {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    color: white;
+    font-size: 20px;
+    cursor: pointer; }
+  .login .input_field {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px 4px 24px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    cursor: pointer; }
+  .login .input_field::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic; }
+  .login .label--icons {
+    display: block;
+    width: 28px;
+    height: 28px;
+    color: white; }
+  .login .reminder {
+    position: absolute;
+    top: calc(100% + 2px);
+    color: #fa2727;
+    font-size: 1.4rem;
+    font-style: italic;
+    padding-left: 4px; }
+  .login__sunmit--btn {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    display: block;
+    width: 80px;
+    height: 40px;
+    background-color: #66ffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: 0.4s linear; }
+  .login__sunmit--btn:hover {
+    opacity: 1;
+    box-shadow: 0 0 16px 4px #99ffcc;
+    transition: 0.4s linear;
+    cursor: pointer; }
+  .login .forgot__password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 12px; }
+  .login .line {
+    display: block;
+    width: 80%;
+    height: 2px;
+    border-bottom: 1px dashed white;
+    margin: 4px 0; }
+  .login .forgot__password--link {
+    display: block;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s linear; }
+    .login .forgot__password--link:hover {
+      color: #99ffcc; }
