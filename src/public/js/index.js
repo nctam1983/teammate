@@ -40,8 +40,20 @@ window.addEventListener('popstate', router);
 
 const links = [...document.querySelectorAll('.link')];
 links.forEach(link => {
-    link.addEventListener('click', e => {
+    link.addEventListener('click', function(e) {
         e.preventDefault();
-        navigate(e.target.href);
+        document.querySelector('.nav--items.active').classList.remove('active')
+        this.parentElement.classList.add('active');
+        navigate(this.href);
     });
+});
+
+const navBar = document.querySelector('#navBar');
+
+navBar.addEventListener('mouseenter', function() {
+    this.classList.add('hover');
+});
+
+navBar.addEventListener('mouseleave', function() {
+    this.classList.remove('hover');
 });

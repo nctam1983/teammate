@@ -5,13 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Teammate</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="/public/index.css" />
     </head>
     <body>
-        <h1>Teammate</h1>
-        <a href="/" class="link">Home</a>
-        <a href="/contact" class="link">Contact</a>
-        <a href="/personal" class="link">Personal</a>
+        <nav id="navBar">
+            <ul class="nav--container">
+                <li class="nav--items active">
+                    <a href="/" class="link">
+                        <i class="nav--icons fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav--items">
+                    <a href="/contact" class="link">
+                        <i class="nav--icons fa-solid fa-message"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav--items">
+                    <a href="/personal" class="link">
+                        <i class="nav--icons fa-solid fa-user"></i>
+                        <span>Personal</span>
+                    </a>
+                </li>                    
+            </ul>
+            <div class="user">
+                <div class="avatar"></div>
+                <div class="name">NguyenChiTam</div>
+            </div>
+        </nav>
         <div id="container"></div>
     </body>
 

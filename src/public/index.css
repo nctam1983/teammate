@@ -247,3 +247,124 @@ html {
     transition: all 0.2s linear; }
     .login .forgot__password--link:hover {
       color: #99ffcc; }
+
+
+#navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 56px;
+  height: 100%;
+  background-color: #fff;
+  transition: all 0.2s ease-in;
+  overflow: hiden;
+}
+
+#navBar.hover {
+  width: 240px;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+}
+
+#navBar .nav--container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#navBar .nav--items {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 36px;
+}
+
+#navBar .nav--items:hover{
+  background-color: #f5f5f5;
+}
+
+#navBar .link {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  line-height: 36px;
+  color: #65676b;
+  font-size: 1.8rem;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+#navBar .active .link {
+  color: black;
+}
+
+#navBar .link:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#navBar .active .link:hover {
+  color: black;
+}
+
+#navBar .nav--icons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 56px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+#navBar .link span{
+  position: absolute;
+  left: 56px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 36px;
+  font-size: 1.8rem;
+}
+
+#navBar .user {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 56px;
+  overflow: hidden;
+}
+
+#navBar .user .avatar{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-image: url(/public/img/logo.png);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+}
+
+#navBar .user .name {
+  position: absolute;
+  left: 56px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 1.8rem;
+}
+
+#container {
+  display: flex;
+  flex-shrink: 1;
+  margin-left: 56px;
+}
