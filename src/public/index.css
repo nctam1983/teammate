@@ -358,9 +358,28 @@ html {
 #navBar .user .name {
   position: absolute;
   left: 56px;
-  height: 48px;
-  line-height: 48px;
+  height: 56px;
+  line-height: 56px;
   font-size: 1.8rem;
+}
+
+#navBar .user .log-out-container{
+  position: absolute;
+  left : calc(240px - 32px);
+  right: 0;
+  display: block;
+  width: 32px;
+  height: 100%;
+}
+
+#navBar .user .log-out-icons{
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 #container {

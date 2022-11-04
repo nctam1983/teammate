@@ -53,6 +53,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 const port = process.env.PORT || 3000;
 
 import userRoute from './routes/user.js';
@@ -69,7 +70,7 @@ app.get('/passport', (req, res) => {
     res.send('passport');
 });
 
-app.get('/*', (req, res) => {
+app.get('/*', checkAuthenticated, (req, res) => {
     res.render('index');
 });
 

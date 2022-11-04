@@ -1,7 +1,8 @@
 import express from 'express';
 import handleRegister from '../controller/handleRegister.js';
 import handleLogin from '../controller/handleLogin.js';
-import verifyAccount from '../controller/verifyAccount.js'
+import verifyAccount from '../controller/verifyAccount.js';
+import handleLogOut from '../controller/handleLogOut.js';
 import {
     checkAuthenticated,
     checkNotAuthenticated,
@@ -35,6 +36,10 @@ route.get('/verify/:id/:activeString', (req, res) => {
     const { id, activeString } = req.params;
     verifyAccount(id, activeString);
     res.send('200')
+});
+
+route.post('/logout', (req, res) => {  
+    handleLogOut(req, res)
 });
 
 export default route;
