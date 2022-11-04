@@ -33,6 +33,14 @@ const AccountShema = new schema({
         require: true,
         default: 'user',
     },
+    active: {
+        type: Boolean,
+        require: true,
+    },
+    activeString: {
+        type: String,
+        require: true,
+    },
 });
 
 AccountShema.pre('save', async function () {

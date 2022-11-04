@@ -18,6 +18,13 @@ const handleLogin = (req, res, next) => {
                 message: `'${username}' not found`,
             });
         }
+        if (!user.active) {
+            return done(null, false, {
+                type: 'error',
+                field: 'password',
+                message: `Your account is not activated.`,
+            });
+        }
         try {
             if (await bcrypt.compare(password, user.password)) {
                 return done(null, user, {

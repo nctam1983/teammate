@@ -1,6 +1,7 @@
 import express from 'express';
 import handleRegister from '../controller/handleRegister.js';
 import handleLogin from '../controller/handleLogin.js';
+import verifyAccount from '../controller/verifyAccount.js'
 import {
     checkAuthenticated,
     checkNotAuthenticated,
@@ -17,7 +18,7 @@ route.post('/register', (req, res) => {
         if (result != 'Done') {
             res.send(result);
         } else {
-            res.render('login');
+            res.redirect('login');
         }
     });
 });
@@ -28,6 +29,12 @@ route.get('/login', (req, res) => {
 
 route.post('/login', (req, res, next) => {
     handleLogin(req, res, next);
+});
+
+route.get('/verify/:id/:activeString', (req, res) => {
+    const { id, activeString } = req.params;
+    verifyAccount(id, activeString);
+    res.send('200')
 });
 
 export default route;
